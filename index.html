@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuvalflix</title>
+    
+    <!-- חיבור קובץ ההגדרות של האפליקציה -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#E50914">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #000000;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- האתר שלך נטען כאן בפנים בצורה נקייה -->
+    <iframe src="https://yuvalflix.com"></iframe>
+
+    <script>
+        // רישום ה-Service Worker כדי שסמסונג יקבלו את זה כאפליקציה
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('האפליקציה מוכנה!'))
+                    .catch(err => console.log('שגיאה ברישום'));
+            });
+        }
+    </script>
+</body>
+</html>
