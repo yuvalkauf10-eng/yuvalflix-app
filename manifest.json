@@ -1,0 +1,9 @@
+{
+  "name": "Yuvalflix",
+  "short_name": "Yuvalflix",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#E50914",
+  "orientation": "portrait"
+}
